@@ -7,9 +7,9 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @EnableBatchProcessing
-@ComponentScan({"com.infybuzz.config", "com.infybuzz.listener", 
-	"com.infybuzz.reader", "com.infybuzz.processor", 
-	"com.infybuzz.writer", "com.infybuzz.listener"})
+@ComponentScan({"dev.pioruocco.config", "dev.pioruocco.listener",
+	"dev.pioruocco.reader", "dev.pioruocco.processor",
+	"dev.pioruocco.writer", "dev.pioruocco.listener"})
 public class SpringBatchApplication {
 
 	public static void main(String[] args) {

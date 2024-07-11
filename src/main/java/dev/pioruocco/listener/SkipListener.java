@@ -19,20 +19,20 @@ public class SkipListener {
 	@OnSkipInRead
 	public void skipInRead(Throwable th) {
 		if(th instanceof FlatFileParseException) {
-			createFile("D:\\M\\U\\Teaching\\Spring-Batch\\Data\\StsProjetcs\\spring-batch\\Chunk Job\\First Chunk Step\\reader\\SkipInRead.txt", 
+			createFile("\\database-batch-processing\\Chunk Job\\First Chunk Step\\reader\\SkipInRead.txt\"",
 					((FlatFileParseException) th).getInput());
 		}
 	}
 	
 	@OnSkipInProcess
 	public void skipInProcess(StudentCsv studentCsv, Throwable th) {
-		createFile("D:\\M\\U\\Teaching\\Spring-Batch\\Data\\StsProjetcs\\spring-batch\\Chunk Job\\First Chunk Step\\processer\\SkipInProcess.txt", 
+		createFile("\\database-batch-processing\\Chunk Job\\First Chunk Step\\processer\\SkipInProcess.txt\"",
 				studentCsv.toString());
 	}
 	
 	@OnSkipInWrite
 	public void skipInWriter(StudentJson studentJson, Throwable th) {
-		createFile("D:\\M\\U\\Teaching\\Spring-Batch\\Data\\StsProjetcs\\spring-batch\\Chunk Job\\First Chunk Step\\writer\\SkipInWrite.txt", 
+		createFile("\\database-batch-processing\\Chunk Job\\First Chunk Step\\writer\\SkipInWrite.txt\"",
 				studentJson.toString());
 	}
 	
